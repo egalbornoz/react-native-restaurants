@@ -1,18 +1,13 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, Text, View } from 'react-native';
-import Navigation from './navigations/Navigation';
-import TabNavigator from './navigations/TabNavigator';
-
-
-
-
+import Navigator from './navigations/Navigator';
 
  function App() {
   return (
   //  <Navigation/>
   
 <NavigationContainer>
-  <TabNavigator />
+  <Navigator />
 </NavigationContainer>
   );
 }

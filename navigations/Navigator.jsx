@@ -1,30 +1,31 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Restaurants from "../screens/Restaurants";
-import Favorites from "../screens/Favorites";
-import Account from "../screens/Account";
 import { Ionicons } from "@expo/vector-icons";
-import TopRestaurants from "../screens/TopRestaurants";
-import Search from "../screens/Search";
+import RestaurantsStack from "./RestaurantsStack";
+import AccountStack from "./AccountStack";
+import FavoritesStack from "./FavoritesStack";
+import TopRestaurantsStack from "./TopRestaurantsStack.jsx";
+import SearchStack from "./SearchStack";
 
 const Tab = createBottomTabNavigator();
 
-const TabNavigator = () => {
+const Navigator = () => {
   return (
     <Tab.Navigator
     Personalización menu bar
       initialRouteName="Restaurants"
       screenOptions={{
-      activeTintColor: "#000",
-      activeBackgroundColor: "#feb72b",
-      inactiveTintColor: "#FFF",
-      inactiveBackgroundColor: "#527318"
+        activeTintColor: "#000",
+        inactiveTintColor: "#FFF",
+        // activeBackgroundColor: "#feb72b",
+        // inactiveBackgroundColor: "#527318"
+      
     }}
     
     >
       <Tab.Screen 
       name="restaurants"
-      component={Restaurants}
+      component={RestaurantsStack}
       options={{
         title: "Restaurantes",
         tabBarIcon: ({ color, size }) => (
@@ -34,7 +35,7 @@ const TabNavigator = () => {
       />
       <Tab.Screen 
       name="favorites" 
-      component={Favorites} 
+      component={FavoritesStack} 
       options={{
         title: "Favoritos",
         tabBarIcon: ({ color, size }) => (
@@ -44,7 +45,7 @@ const TabNavigator = () => {
       />
       <Tab.Screen 
       name="top-restaurants" 
-      component={TopRestaurants} 
+      component={TopRestaurantsStack} 
       options={{
         title: "Mejores",
         tabBarIcon: ({ color, size }) => (
@@ -54,7 +55,7 @@ const TabNavigator = () => {
       />
       <Tab.Screen 
       name="search" 
-      component={Search} 
+      component={SearchStack} 
       options={{
         title: "Buscar",
         tabBarIcon: ({ color, size }) => (
@@ -63,8 +64,8 @@ const TabNavigator = () => {
       }}
       />
       <Tab.Screen 
-      name="Cuenta" 
-      component={Account}
+      name="account" 
+      component={AccountStack}
       options={{
         title: "Cuenta",
         tabBarIcon: ({ color, size }) => (
@@ -76,4 +77,4 @@ const TabNavigator = () => {
   );
 };
 
-export default TabNavigator;
+export default Navigator;
