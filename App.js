@@ -1,5 +1,7 @@
+import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, Text, View } from 'react-native';
 import Navigation from './navigations/Navigation';
+import TabNavigator from './navigations/TabNavigator';
 
 
 
@@ -7,7 +9,11 @@ import Navigation from './navigations/Navigation';
 
  function App() {
   return (
-   <Navigation/>
+  //  <Navigation/>
+  
+<NavigationContainer>
+  <TabNavigator />
+</NavigationContainer>
   );
 }
 

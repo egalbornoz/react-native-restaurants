@@ -1,11 +1,18 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-function Account() {
+const Account = props => {
   return (
-    <View>
-      <Text>Account</Text>
-    </View>
+    <View
+    style={{
+      flex: 1,
+      backgroundColor: "#0462b3",
+      justifyContent: "center",
+      alignItems: "center"
+    }}
+  >
+    <Text style={{color:"#fff", fontSize: 42, fontWeight: "bold" }}>Cuenta</Text>
+  </View>
   )
 }
 
